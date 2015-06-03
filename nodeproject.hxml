@@ -2,9 +2,10 @@
 -lib haxedci
 -lib buddy
 -lib slambda
+-lib mithril
 -D dci-signatures-warnings
 -cp src 
 -cp tests
 -debug
--main Tests
+-main Main
 -js bin/nodeproject.js 
