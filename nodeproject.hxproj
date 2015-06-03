@@ -16,13 +16,14 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
+    <class path="tests" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="dci-signatures-warnings" />
+    <option directives="dci-signatures-warnings&#xA;nodejs" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
-    <option mainClass="Main" />
+    <option mainClass="Tests" />
     <option enabledebug="False" />
     <option additional="" />
   </build>
@@ -31,6 +32,8 @@
     <library name="js-kit" />
     <library name="haxedci" />
     <library name="HaxeContracts" />
+    <library name="buddy" />
+    <library name="slambda" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
