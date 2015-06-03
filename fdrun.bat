@@ -1,4 +1,3 @@
 @echo off
 cd bin
-node nodeproject.js
-pause
+start index.html
