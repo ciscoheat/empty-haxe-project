@@ -15,7 +15,7 @@ implements HaxeContracts implements Mithril implements Context
 	public function new() {
 		Contract.requires(true != false, "Uh-oh.");
 
-		this.amount = [100, 20, 3].fold.fn1([i, n] => i + n, 0);
+		this.amount = [100, 20, 3].fold.fn([i, n] => i + n, 0);
 	}
 	
 	///// Mithril stuff /////
