@@ -2,15 +2,15 @@
 <project version="2">
   <!-- Output SWF options -->
   <output>
-    <movie outputType="Application" />
+    <movie outputType="CustomBuild" />
     <movie input="" />
-    <movie path="bin\nodeproject.js" />
+    <movie path="nodeproject.hxml" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
     <movie version="0" />
     <movie minorVersion="0" />
-    <movie platform="JavaScript" />
+    <movie platform="hxml" />
     <movie background="#FFFFFF" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
@@ -20,18 +20,18 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="dci-signatures-warnings&#xA;nodejs" />
+    <option directives="nodejs&#xA;dci-signatures-warnings" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="Tests" />
     <option enabledebug="False" />
-    <option additional="" />
+    <option additional="--macro npm.Package.export(&quot;package.json&quot;)&#xA;-debug " />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
     <library name="js-kit" />
-    <library name="haxedci" />
     <library name="HaxeContracts" />
+    <library name="haxedci" />
     <library name="buddy" />
     <library name="slambda" />
   </haxelib>
@@ -44,7 +44,7 @@
     <hidden path="obj" />
   </hiddenPaths>
   <!-- Executed before build -->
-  <preBuildCommand />
+  <preBuildCommand>cmd /c haxe $(OutputFile)</preBuildCommand>
   <!-- Executed after build -->
   <postBuildCommand alwaysRun="False" />
   <!-- Other project options -->
