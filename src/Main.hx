@@ -1,4 +1,5 @@
 
+import dataclass.DataClass;
 import haxecontracts.Contract;
 import haxecontracts.HaxeContracts;
 import haxedci.Context;
@@ -23,7 +24,9 @@ implements HaxeContracts implements Mithril implements Context
 	var user : User;
 
 	public function controller() {
-		this.user = new User("Thorin Oakenshield");
+		this.user = new User({
+			name: "Thorin Oakenshield"
+		});
 	}
 
 	public function view() [
@@ -55,14 +58,7 @@ implements HaxeContracts implements Mithril implements Context
 	}	
 }
 
-class User implements Model
+class User implements Model implements DataClass
 {
 	@prop public var name : String;
-
-	public function new(name) {
-		// Using M.prop, this.name is now a method similar to
-		// jQuery's methods. If called with no parameters the
-		// value is returned, otherwise the value is set.
-		this.name = M.prop(name);
-	}
 }

@@ -3,6 +3,7 @@
 -lib buddy
 -lib slambda
 -lib mithril
+-lib dataclass
 -D dci-signatures-warnings
 -cp src 
 -cp tests
