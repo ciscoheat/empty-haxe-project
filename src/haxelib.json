@@ -1,0 +1,10 @@
+{
+    "name": "nodeproject",
+    "url": "https://github.com/{{GITHUB_USERNAME}}/nodeproject",
+    "description": "{{DESCRIPTION}}",
+    "license": "MIT",
+    "releasenote": "Initial version.",
+    "contributors": ["{{HAXELIB_USERNAME}}"],
+    "version": "0.1.0",
+    "tags": []
+}
