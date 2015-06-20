@@ -10,6 +10,7 @@ start /WAIT /B fnr --cl --dir "%CD%\src" --find "nodeproject" --replace "%1" --f
 
 choice /C:AB /D:A /T 1 >NUL
 del fnr.exe
+del renameproject.sh
 start /b "" cmd /c del "%~f0"&exit /b
 
 GOTO end
