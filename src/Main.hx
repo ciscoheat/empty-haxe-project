@@ -17,17 +17,15 @@ implements HaxeContracts implements Mithril implements Context
 		Contract.requires(true != false, "Uh-oh.");
 
 		this.amount = [100, 20, 3].fold.fn([i, n] => i + n, 0);
+
+		this.user = new User({
+			name: M.prop("Thorin Oakenshield")
+		});		
 	}
 	
 	///// Mithril stuff /////
 
 	var user : User;
-
-	public function controller() {
-		this.user = new User({
-			name: "Thorin Oakenshield"
-		});
-	}
 
 	public function view() [
 		m("input", {
