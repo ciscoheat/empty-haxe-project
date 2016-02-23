@@ -5,6 +5,7 @@ A common first usage setup after cloning the repo:
 ```
 npm install -g nodemon
 renameproject my-project-name
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git develop
 haxe my-project-name.hxml
 npm start
 ```
