@@ -25,10 +25,11 @@
     <option noInlineOnDebug="False" />
     <option mainClass="Tests" />
     <option enabledebug="False" />
-    <option additional="--macro npm.Package.export(&quot;package.json&quot;)&#xA;-debug " />
+    <option additional="--macro npm.Package.export('package.json')&#xA;-debug " />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
+    <library name="hxnodejs" />
     <library name="js-kit" />
     <library name="HaxeContracts" />
     <library name="haxedci" />

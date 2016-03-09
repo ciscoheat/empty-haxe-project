@@ -6,7 +6,7 @@
 -lib slambda
 -D nodejs
 -D dci-signatures-warnings
---macro npm.Package.export("package.json")
+--macro npm.Package.export('package.json')
 -cp src 
 -cp tests
 -debug
