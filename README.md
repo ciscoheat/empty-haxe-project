@@ -1,9 +1,10 @@
-An empty Haxe/Node.js project, to get started quickly.
+An empty Haxe/Node.js project with [express](http://expressjs.com), to get started quickly.
 
 A common first usage setup after cloning the repo:
 
 ```
-npm install -g nodemon
+npm install
+npm install -g supervisor
 renameproject my-project-name
 haxelib git js-kit https://github.com/clemos/haxe-js-kit.git develop
 haxe my-project-name.hxml

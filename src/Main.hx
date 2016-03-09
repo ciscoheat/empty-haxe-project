@@ -1,34 +1,59 @@
 
+import buddy.internal.sys.Js;
 import haxecontracts.Contract;
 import haxecontracts.HaxeContracts;
-import haxedci.Context;
+import js.Node;
+import js.node.http.Server;
+import js.npm.Express;
 
 using Slambda;
 using StringTools;
 
-class Main 
-implements HaxeContracts implements Context
+class Main implements HaxeContracts
 {	
+	var app : Express;
+	var server : Server;
+	
 	static function main() {
-		new Main().start();
+		var port = if (Node.process.argv.length == 3) 
+			Std.parseInt(Node.process.argv[2])
+		else if (Node.process.env.exists("PORT"))
+			Std.parseInt(Node.process.env.get("PORT"))
+		else 
+			2000;
+			
+		new Main().start(port);
 	}
 
 	public function new() {
 		Contract.requires(true != false, "Uh-oh.");
+		
+		app = new Express();
+		server = null;
 
-		this.amount = [100, 20, 3].fold.fn([i, n] => i + n, 0);
+		///// Routes /////
+		
+		app.get('/', function(req, res) {
+			res.send("Hello world!");
+		});
 	}
 	
-	public function start() amount.display();
-	public function value() return amount;
-
-	@role var amount : Int = {
-		function display() : Void {
-			trace(self);
-		}
+	public function start(port : Int) {
+		Contract.requires(server == null, "Server already started.");
+		
+		server = cast app.listen(port, function() { 
+			trace('Started server on port $port.');
+		});
+		
+		return this;
 	}
-
-	@invariant function invariants() {
-		Contract.invariant(amount == 123, "Amount must always be 123.");
+	
+	public function stop() {
+		server.close(function() {
+			trace("Server stopped.");
+		});
+		
+		server = null;
+		return this;
 	}
 }
