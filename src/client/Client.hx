@@ -35,7 +35,7 @@ implements HaxeContracts implements Mithril implements Context
 		}),
 		DIV.user({style: {paddingTop: "20px"}}, [
 			DIV("Name: ", STRONG(user.name)),
-			DIV("Age: ", STRONG(Date.now().getFullYear() - user.birthYear + " years old."))
+			DIV("Age: ", STRONG(Date.now().getFullYear() - user.birthYear + " years old"))
 		])
 	];
 	

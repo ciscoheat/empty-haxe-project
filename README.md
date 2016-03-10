@@ -9,4 +9,9 @@ npm run build
 npm start
 ```
 
-`renameproject.bat` which is used to rename the project uses `fnr.exe` which is a rather large .exe file, they are both deleted after renaming. A nice contribution would be to make a Haxe file that does the same.
+**Project structure**
+
+src - hxml files and source code
+bin - server and test output
+bin/public - public files, client output
+bin/views  - template files
