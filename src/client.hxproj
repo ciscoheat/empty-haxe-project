@@ -17,6 +17,7 @@
   <classpaths>
     <class path="client" />
     <class path="shared" />
+    <class path="..\bin\views" />
   </classpaths>
   <!-- Build options -->
   <build>

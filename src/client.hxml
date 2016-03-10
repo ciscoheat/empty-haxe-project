@@ -5,6 +5,7 @@
 -lib mithril
 -cp client
 -cp shared
+-cp ../bin/views
 -debug
 -main Client
 -js ../bin/public/client.js
