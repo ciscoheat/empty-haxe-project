@@ -1,0 +1,6 @@
+-cmd npm install
+-cmd bower install
+--next
+server.hxml
+--next
+client.hxml

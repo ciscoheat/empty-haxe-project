@@ -11,6 +11,8 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "cd bin && nodemon nodeproject.js"
+		"start": "cd bin && supervisor server.js",
+		"install": "haxe build.hxml",
+		"preinstall": "npm install supervisor nodemon bower -g"
 	}
 }

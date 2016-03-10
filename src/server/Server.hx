@@ -1,18 +1,20 @@
 
-import buddy.internal.sys.Js;
 import haxecontracts.Contract;
 import haxecontracts.HaxeContracts;
 import js.Node;
-import js.node.http.Server;
+import js.node.http.Server in NodeServer;
 import js.npm.Express;
+import js.npm.express.Request;
+import js.npm.express.Response;
+import js.npm.express.Static;
 
 using Slambda;
 using StringTools;
 
-class Main implements HaxeContracts
+class Server implements HaxeContracts
 {	
 	var app : Express;
-	var server : Server;
+	var server : NodeServer;
 	
 	static function main() {
 		var port = if (Node.process.argv.length == 3) 
@@ -22,19 +24,23 @@ class Main implements HaxeContracts
 		else 
 			2000;
 			
-		new Main().start(port);
+		new Server().start(port);
 	}
 
 	public function new() {
 		Contract.requires(true != false, "Uh-oh.");
 		
-		app = new Express();
 		server = null;
+		app = new Express();
+
+		///// Configuration /////
+		
+		app.use(new Static("public"));
 
 		///// Routes /////
 		
-		app.get('/', function(req, res) {
-			res.send("Hello world!");
+		app.get('/', function(req : Request, res : Response) {
+			res.sendfile("public/index.html");
 		});
 	}
 	
@@ -49,6 +55,8 @@ class Main implements HaxeContracts
 	}
 	
 	public function stop() {
+		Contract.ensures(server == null, "Server wasn't uninitialized after stopping.");
+		
 		server.close(function() {
 			trace("Server stopped.");
 		});

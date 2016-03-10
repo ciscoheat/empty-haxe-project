@@ -1,0 +1,10 @@
+-lib HaxeContracts
+-lib haxedci
+-lib slambda
+-lib dataclass
+-lib mithril
+-cp src/client
+-cp src/shared
+-debug
+-main Client
+-js bin/public/client.js

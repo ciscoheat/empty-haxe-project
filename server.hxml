@@ -2,13 +2,13 @@
 -lib js-kit
 -lib HaxeContracts
 -lib haxedci
--lib buddy
 -lib slambda
+-lib dataclass
 -D nodejs
--D dci-signatures-warnings
+-D server
+-cp src/server
+-cp src/shared
 --macro npm.Package.export('package.json')
--cp src 
--cp tests
 -debug
--main Tests
--js bin/nodeproject.js 
+-main Server
+-js bin/server.js 

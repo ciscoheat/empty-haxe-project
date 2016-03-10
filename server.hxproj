@@ -4,7 +4,7 @@
   <output>
     <movie outputType="CustomBuild" />
     <movie input="" />
-    <movie path="nodeproject.hxml" />
+    <movie path="server.hxml" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
@@ -15,15 +15,15 @@
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="src" />
-    <class path="tests" />
+    <class path="src\server" />
+    <class path="src\shared" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="nodejs&#xA;dci-signatures-warnings" />
+    <option directives="nodejs&#xA;server" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
-    <option mainClass="Tests" />
+    <option mainClass="Server" />
     <option enabledebug="False" />
     <option additional="--macro npm.Package.export('package.json')&#xA;-debug " />
   </build>
@@ -33,12 +33,12 @@
     <library name="js-kit" />
     <library name="HaxeContracts" />
     <library name="haxedci" />
-    <library name="buddy" />
     <library name="slambda" />
+    <library name="dataclass" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
-    <compile path="src\Main.hx" />
+    <compile path="src\server\Server.hx" />
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
@@ -52,7 +52,7 @@
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="Custom" />
-    <option testMovieCommand="fdrun.bat" />
+    <option testMovieCommand="npm start" />
   </options>
   <!-- Plugin storage -->
   <storage />

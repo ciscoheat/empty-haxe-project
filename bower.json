@@ -1,0 +1,21 @@
+{
+  "name": "nodeproject",
+  "description": "ADD DESCRIPTION",
+  "authors": [
+    "You know who"
+  ],
+  "license": "All Rights Reserved",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mithril": "^0.2.3"
+  }
+}
