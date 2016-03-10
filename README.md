@@ -4,10 +4,9 @@ A common first usage setup after cloning the repo:
 
 ```
 renameproject my-project-name
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git develop
 npm run globals
 npm run build
-haxelib git js-kit https://github.com/clemos/haxe-js-kit.git develop
-haxe my-project-name.hxml
 npm start
 ```
 

@@ -1,3 +1,4 @@
+-cmd cd ..
 -cmd npm install
 -cmd bower install
 -cmd cd src
