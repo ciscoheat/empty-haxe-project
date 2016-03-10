@@ -3,8 +3,8 @@
 -lib slambda
 -lib dataclass
 -lib mithril
--cp src/client
--cp src/shared
+-cp client
+-cp shared
 -debug
 -main Client
--js bin/public/client.js
+-js ../bin/public/client.js

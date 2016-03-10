@@ -1,6 +1,9 @@
 -cmd npm install
 -cmd bower install
+-cmd cd src
 --next
 server.hxml
 --next
 client.hxml
+--next
+tests.hxml

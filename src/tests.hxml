@@ -6,10 +6,10 @@
 -lib dataclass
 -D nodejs
 -D server
--cp src/tests
--cp src/server
--cp src/shared
+-cp tests
+-cp server
+-cp shared
 -debug
 -main Tests
--js bin/tests.js 
+-js ../bin/tests.js 
 -lib buddy

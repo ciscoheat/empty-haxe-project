@@ -6,9 +6,9 @@
 -lib dataclass
 -D nodejs
 -D server
--cp src/server
--cp src/shared
---macro npm.Package.export('package.json')
+-cp server
+-cp shared
+--macro npm.Package.export('../package.json')
 -debug
 -main Server
--js bin/server.js 
+-js ../bin/server.js 

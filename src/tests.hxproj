@@ -4,7 +4,7 @@
   <output>
     <movie outputType="CustomBuild" />
     <movie input="" />
-    <movie path="client.hxml" />
+    <movie path="tests.hxml" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
@@ -15,29 +15,32 @@
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="src\client" />
-    <class path="src\shared" />
+    <class path="tests" />
+    <class path="server" />
+    <class path="shared" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="" />
+    <option directives="nodejs&#xA;server" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
-    <option mainClass="Client" />
+    <option mainClass="Tests" />
     <option enabledebug="False" />
     <option additional="-debug " />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
+    <library name="hxnodejs" />
+    <library name="js-kit" />
     <library name="HaxeContracts" />
     <library name="haxedci" />
     <library name="slambda" />
     <library name="dataclass" />
-    <library name="mithril" />
+    <library name="buddy" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
-    <compile path="src\client\Client.hx" />
+    <compile path="tests\Tests.hx" />
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
@@ -51,7 +54,7 @@
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="Custom" />
-    <option testMovieCommand="" />
+    <option testMovieCommand="npm test" />
   </options>
   <!-- Plugin storage -->
   <storage />
