@@ -1,20 +1,21 @@
 {
-	"name": "nodeproject",
-	"license": "All Rights Reserved",
-	"description": "ADD DESCRIPTION",
-	"author": "You know who",
-	"version": "0.1.0",
-	"private": true,
-	"devDependencies": {
-		"restler": "^3.4.0"
-	},
-	"dependencies": {
-		"express": "~4.0"
-	},
-	"scripts": {
-		"test": "cd bin && node tests.js",
-		"start": "cd bin && supervisor server.js",
-		"globals": "npm install supervisor nodemon bower -g",
-		"build": "haxe build.hxml"
-	}
+  "name": "nodeproject",
+  "license": "All Rights Reserved",
+  "description": "ADD DESCRIPTION",
+  "author": "You know who",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "restler": "^3.4.0"
+  },
+  "dependencies": {
+    "express": "~4.0",
+    "jade": "^1.11.0"
+  },
+  "scripts": {
+    "test": "cd bin && node tests.js",
+    "start": "cd bin && supervisor server.js",
+    "globals": "npm install supervisor nodemon bower -g",
+    "build": "haxe build.hxml"
+  }
 }

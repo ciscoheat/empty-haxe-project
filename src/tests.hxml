@@ -9,6 +9,7 @@
 -cp tests
 -cp server
 -cp shared
+-cp ..bin/views
 -debug
 -main Tests
 -js ../bin/tests.js 

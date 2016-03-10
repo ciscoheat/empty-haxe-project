@@ -35,6 +35,7 @@ class Server implements HaxeContracts
 
 		///// Configuration /////
 		
+		app.set("view engine", "jade");
 		app.use(new Static("public"));
 
 		///// Routes /////

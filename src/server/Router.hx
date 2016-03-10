@@ -15,7 +15,7 @@ class Router implements HaxeContracts
 	public function createRoutes(app : Express) {
 		
 		app.get('/', function(req : Request, res : Response) {
-			res.sendfile("public/index.html");
+			res.render("index");
 		});
 
 		app.get('/helloworld', function(req : Request, res : Response) {
