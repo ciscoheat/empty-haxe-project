@@ -3,8 +3,8 @@
 -cmd bower install
 -cmd cd src
 --next
-server.hxml
---next
 client.hxml
+--next
+server.hxml
 --next
 tests.hxml
