@@ -1,5 +1,7 @@
 /bin/server*.js
 /bin/server*.map
+/bin/tests*.js
+/bin/tests*.map
 /bin/public/client*.js
 /bin/public/client*.map
 .vagrant

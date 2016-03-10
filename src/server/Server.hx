@@ -42,6 +42,10 @@ class Server implements HaxeContracts
 		app.get('/', function(req : Request, res : Response) {
 			res.sendfile("public/index.html");
 		});
+
+		app.get('/helloworld', function(req : Request, res : Response) {
+			res.send("Hello World!");
+		});
 	}
 	
 	public function start(port : Int) {

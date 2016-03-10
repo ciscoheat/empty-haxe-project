@@ -1,0 +1,15 @@
+-lib hxnodejs
+-lib js-kit
+-lib HaxeContracts
+-lib haxedci
+-lib slambda
+-lib dataclass
+-D nodejs
+-D server
+-cp src/tests
+-cp src/server
+-cp src/shared
+-debug
+-main Tests
+-js bin/tests.js 
+-lib buddy

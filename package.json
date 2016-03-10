@@ -10,9 +10,9 @@
 		"express": "~4.0"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "cd bin && nodemon tests.js",
 		"start": "cd bin && supervisor server.js",
-		"install": "haxe build.hxml",
+		"install": "haxe build.hxml && haxe tests.hxml",
 		"preinstall": "npm install supervisor nodemon bower -g"
 	}
 }
