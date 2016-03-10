@@ -54,7 +54,7 @@
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="Custom" />
-    <option testMovieCommand="npm test" />
+    <option testMovieCommand="npm test &amp;&amp; pause" />
   </options>
   <!-- Plugin storage -->
   <storage />
