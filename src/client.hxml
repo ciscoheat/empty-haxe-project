@@ -7,5 +7,6 @@
 -cp shared
 -cp ../bin/views
 -debug
+-D source-map-content
 -main Client
 -js ../bin/public/client.js
