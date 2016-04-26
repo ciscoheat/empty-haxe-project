@@ -1,3 +1,4 @@
+-lib dataclass
 -lib HaxeContracts
 -lib haxedci
 -lib buddy
