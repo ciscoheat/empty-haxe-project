@@ -1,6 +1,4 @@
-/bin/*.js
-/bin/*.map
+/bin
+/php
 .vagrant
-node_modules
 *.sublime-workspace
-/bin/*.n

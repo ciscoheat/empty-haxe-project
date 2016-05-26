@@ -1,6 +1,6 @@
 using buddy.Should;
 
-class Tests extends buddy.SingleSuite
+class RunTests extends buddy.SingleSuite
 {	
 	public function new() {
 		describe("Main", {
