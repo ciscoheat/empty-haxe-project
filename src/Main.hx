@@ -6,15 +6,16 @@ using Slambda;
 using StringTools;
 
 class Main 
-implements HaxeContracts implements dci.Context
+implements Immutable implements HaxeContracts implements dci.Context
 {	
 	static function main() {
-		new Main("Main").start();
+		// Clear out the rest of the file for a bare-bones starting point.
+		trace(new Main("tseT").start());
 	}
 
 	public function new(name) {
-		Contract.requires(true != false, "Uh-oh.");
-		Contract.ensures(this.name != null);
+		requires(true != false, "Uh-oh.");
+		ensures(this.name != null);
 
 		this.name = name;
 		this.amount = [100, 20, 3].fold.fn([i, n] => i + n, 0);
@@ -36,7 +37,7 @@ implements HaxeContracts implements dci.Context
 	
 	var amount : Int;
 
-	@invariant function invariants() {
-		Contract.invariant(amount == 123, "Amount must always be 123.");
+	@invariant function inv() {
+		invariant(amount == 123, "Amount must always be 123.");
 	}
 }

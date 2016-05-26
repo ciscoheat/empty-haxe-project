@@ -1,0 +1,4 @@
+_common.hxml
+
+-cp ./tests/
+-main RunTests

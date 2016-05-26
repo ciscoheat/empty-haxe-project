@@ -5,8 +5,8 @@
   "description": "ADD DESCRIPTION",
   "scripts": {
     "start": "cd bin && nodemon nodeproject.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "haxelib run travix node"
   },
   "author": "You know who",
-  "license": "All Rights Reserved"
+  "license": "All Rights Reserved or MIT?"
 }

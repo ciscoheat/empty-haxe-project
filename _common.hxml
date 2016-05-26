@@ -1,0 +1,12 @@
+-lib asynctools
+-lib buddy
+-lib dataclass
+-lib HaxeContracts
+-lib haxedci
+-lib hxnodejs
+-lib immutable
+-lib js-kit
+-lib slambda
+--macro npm.Package.export('package.json')
+-cp src 
+-debug

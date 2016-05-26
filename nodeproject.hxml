@@ -1,14 +1,4 @@
--lib asynctools
--lib dataclass
--lib hxnodejs
--lib js-kit
--lib HaxeContracts
--lib haxedci
--lib buddy
--lib slambda
---macro npm.Package.export('package.json')
--cp src 
--cp tests
--debug
--main Tests
+_common.hxml
+
+-main Main
 -js bin/nodeproject.js 
