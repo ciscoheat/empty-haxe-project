@@ -1,5 +1,6 @@
 _common.hxml
 
 -lib buddy
+-D buddy-colors
 -cp ./tests/
 -main RunTests
