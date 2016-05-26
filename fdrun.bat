@@ -1,9 +1,9 @@
 @echo off
 
 :: To run normally:
-::cd bin && node nodeproject.js
+node bin\nodeproject.js
 
-:: To use travis (initialize with "haxelib dev nodeproject .")
+:: To test with travix (initialize with "haxelib dev nodeproject .")
 ::haxelib run travix node
 
 pause
