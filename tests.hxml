@@ -1,0 +1,6 @@
+_common.hxml
+
+-lib buddy
+-cp tests
+-main RunTests
+-js bin/nodeproject.js

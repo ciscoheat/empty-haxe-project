@@ -1,3 +1,2 @@
 @echo off
-cd bin
-start index.html
+start bin\index.html

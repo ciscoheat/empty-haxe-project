@@ -11,52 +11,37 @@ using Slambda;
 using StringTools;
 
 class Main 
-implements HaxeContracts implements Mithril implements Context
+implements HaxeContracts implements Mithril implements Context implements Immutable
 {
-	public function new() {
-		Contract.requires(true != false, "Uh-oh.");
-
-		this.amount = [100, 20, 3].fold.fn([i, n] => i + n, 0);
-
-		this.user = new User({
-			name: M.prop("Thorin Oakenshield")
-		});		
-	}
-	
-	///// Mithril stuff /////
-
-	var user : User;
-
-	public function view() [
-		m("input", {
-			oninput: M.withAttr("value", user.name),
-			value: user.name()
-		}),
-		m(".user", { style: { margin: "15px" }}, user.name()),
-		m("div", amount + " years old.")
-	];
-	
 	static function main() {
 		M.mount(Browser.document.body, new Main());
 	}
-
-	///// Test/DCI stuff /////
 	
-	public function start() amount.display();
-	public function value() return amount;
+	/////////////////////////////////////////////////////////////////////////
+	
+	public var user : User;
 
-	@role var amount : Int = {
-		function display() : Void {
-			trace(self);
-		}
+	public function new() {
+		Contract.requires(true != false, "Uh-oh.");
+
+		this.user = new User({
+			name: "Thorin Oakenshield",
+			birthYear: 1146
+		});
 	}
-
+	
+	public function view() [
+		INPUT({
+			oninput: M.withAttr("value", function(value) user.name = value),
+			value: user.name
+		}),
+		DIV.user({style: {paddingTop: "20px"}}, [
+			DIV("Name: ", STRONG(user.name)),
+			DIV("Age: ", STRONG(Date.now().getFullYear() - user.birthYear + " years old"))
+		])
+	];
+	
 	@invariant function invariants() {
-		Contract.invariant(amount == 123, "Amount must always be 123.");
+		Contract.invariant(user.name.startsWith("Thorin") , "The user is not a Dwarven king.");
 	}	
-}
-
-class User implements Model implements DataClass
-{
-	@prop public var name : String;
 }

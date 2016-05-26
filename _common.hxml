@@ -1,0 +1,10 @@
+-lib asynctools
+-lib dataclass
+-lib HaxeContracts
+-lib haxedci
+-lib immutable
+-lib mithril
+-lib slambda
+-cp src 
+-debug
+-D source-map-content

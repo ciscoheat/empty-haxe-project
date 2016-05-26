@@ -1,13 +1,4 @@
--lib asynctools
--lib HaxeContracts
--lib haxedci
--lib buddy
--lib slambda
--lib mithril
--lib dataclass
--cp src 
--cp tests
--debug
--D source-map-content
+_common.hxml
+
 -main Main
 -js bin/nodeproject.js 
