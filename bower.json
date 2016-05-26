@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "mithril": "^0.2.3"
+    "mithril": "^0.2.5"
   }
 }

@@ -1,0 +1,8 @@
+-lib immutable
+-lib asynctools
+-lib HaxeContracts
+-lib haxedci
+-lib slambda
+-lib dataclass
+-cp shared
+-debug

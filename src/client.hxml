@@ -1,12 +1,8 @@
--lib HaxeContracts
--lib haxedci
--lib slambda
--lib dataclass
+_common.hxml
+
 -lib mithril
 -cp client
--cp shared
 -cp ../bin/views
--debug
 -D source-map-content
 -main Client
 -js ../bin/public/client.js

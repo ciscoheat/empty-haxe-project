@@ -1,15 +1,10 @@
+_common.hxml
+
 -lib hxnodejs
 -lib js-kit
--lib HaxeContracts
--lib haxedci
--lib slambda
--lib dataclass
--D nodejs
 -D server
 -cp server
--cp shared
 -cp ../bin/views
 --macro npm.Package.export('../package.json')
--debug
 -main Server
 -js ../bin/server.js 

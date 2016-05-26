@@ -1,10 +1,9 @@
 
-import buddy.*;
 import js.npm.Restler;
 
 using buddy.Should;
 
-class Tests extends BuddySuite implements Buddy<[Tests]>
+class RunTests extends buddy.SingleSuite
 {	
 	public function new() {
 		var server = new Server().start(2001);
@@ -19,7 +18,7 @@ class Tests extends BuddySuite implements Buddy<[Tests]>
 			});
 		});
 		
-		after({
+		afterEach({
 			server.stop();
 		});
 	}

@@ -1,17 +1,12 @@
--lib asynctools
+_common.hxml
+
 -lib hxnodejs
 -lib js-kit
--lib HaxeContracts
--lib haxedci
--lib slambda
--lib dataclass
 -D nodejs
 -D server
 -cp tests
 -cp server
--cp shared
 -cp ..bin/views
--debug
--main Tests
+-main RunTests
 -js ../bin/tests.js 
 -lib buddy
