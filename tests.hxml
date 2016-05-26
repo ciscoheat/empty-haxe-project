@@ -1,4 +1,5 @@
 _common.hxml
 
+-lib buddy
 -cp ./tests/
 -main RunTests

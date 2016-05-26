@@ -1,5 +1,4 @@
 -lib asynctools
--lib buddy
 -lib dataclass
 -lib HaxeContracts
 -lib haxedci
